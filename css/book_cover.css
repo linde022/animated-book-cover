@@ -1,0 +1,177 @@
+@font-face {
+    font-family: "Mouse";
+    src: url(../fonts/Mouse.woff2);
+}
+@font-face {
+    font-family: "AlienEncountersSolid";
+    src: url(../fonts/SFAlienEncountersSolid.woff2);
+}
+.container{
+    width: 379px;
+    height: 600px;
+    background: #141414;
+    z-index: -3;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-50%)
+}
+.pixels {
+    width: 379px;
+    height: 600px;
+    top: -290px;
+    position: relative;
+    background-image: url(../images/pixels.png);
+    background-repeat: no-repeat;
+    z-index: -1;
+    animation: pixels 5s;
+  }
+.font1{
+    font-family: "Mouse";
+    color: #4994E4;
+    font-size: 1.2em;
+    text-align: right;
+    margin-right: 70px;
+    margin-top: 60px;
+}
+.font1b{
+    font-family: "Mouse";
+    color: white;
+    font-size: 1.3em;
+    margin-top: 170px;
+    text-align: center;
+    z-index: 6;
+}
+.font2{
+    font-family: "AlienEncountersSolid";
+    color: #4994E4;
+    font-size: 1.5em;
+    text-align: center;
+    top: 10px;
+    margin-bottom: 0%;
+}
+.font2b{
+    font-family: "AlienEncountersSolid";
+    color: #DADD0C;
+    font-size: 6.5em;
+    text-align: center;
+    margin-top: -5%;
+}
+.font2bb{
+    font-family: "AlienEncountersSolid";
+    color: #DADD0C;
+    font-size: 3em;
+    text-align: center;
+    opacity: 1;
+}
+.one{
+    font-family: "AlienEncountersSolid";
+    color: #DADD0C;
+    font-size: 1em;
+    text-align: center;
+    opacity: 0;
+    animation: blink 2s infinite;
+}
+.two{
+    font-family: "AlienEncountersSolid";
+    color: #DADD0C;
+    font-size: 1em;
+    text-align: center;
+    margin-top: -1em;
+    opacity: 0;
+}
+.pacman{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background: #DADD0C;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 120px;
+    margin-bottom: 30px;
+    z-index: 5;
+}
+ .mouth {
+        background:#141414;
+        ;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+        animation: eat 0.7s infinite;
+        animation-delay: 5s;
+        z-index: -1;
+}
+.food {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: food 1s linear 0s infinite;
+    animation-delay: 5s;
+    z-index: 1;
+}
+@keyframes eat {
+    0% {
+      clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+    }
+    25% {
+      clip-path: polygon(100% 60%, 44% 48%, 100% 40%);
+    }
+    
+    50% {
+      clip-path: polygon(100% 50%, 44% 48%, 100% 50%);
+    }
+    
+    75% {
+     clip-path: polygon(100% 59%, 44% 48%, 100% 35%);
+    }
+    
+    100% {
+     clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+    }
+  }
+  @keyframes food {
+	0% { box-shadow: 
+      80px 25px 0 0 #DADD0C, 
+      100px 25px 0 0 #DADD0C, 
+      120px 25px 0 0 #DADD0C; }
+33% { box-shadow: 
+      30px 25px 0 0 #DADD0C, 
+      50px 25px 0 0 #DADD0C,
+      70px 25px 0 0 #DADD0C; }
+66% { box-shadow: 
+     0px 25px 0 0 #DADD0C, 
+     0px 25px 0 0 #DADD0C,
+     20px 25px 0 0 #DADD0C; }
+100% { box-shadow: 
+     0px 25px 0 0 #DADD0C, 
+     0px 25px 0 0 #DADD0C,
+     0px 25px 0 0 #DADD0C; }
+}
+
+@keyframes blink {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+@keyframes pixels {
+    0% {top: 50px;}
+    100% {top: -290px;}
+}
+.font2bb:hover .one{
+    animation: fade 1s;
+    }
+.font2bb:hover .two {
+    animation: blink 3s infinite;
+    animation-delay: 1s;
+}
+@keyframes fade{
+    0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+@keyframes blink2 {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
